@@ -1,0 +1,201 @@
+body {
+    margin: auto;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.desktop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-style: dashed;
+}
+
+.containerDesconto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #005CFF;
+    color: #FFFFFF;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.containerDesconto p {
+    margin: 0;
+}
+
+.azul {
+    background-color: #A65A96;
+}
+
+.containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-style: dashed;
+}
+
+.containerHeaderLogo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 60px;
+    border-style: dashed;
+
+}
+
+.containnerLogoUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logoInput {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.inputIcon {
+    display: flex;
+    align-items: center;
+
+}
+
+.inputIcon input {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+.inputIcon button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.iconUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconUser a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+
+    color: #333;
+    font-weight: 500;
+
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #005CFF;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menuLink {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menuLink span {
+    font-weight: bold;
+    margin: 0;
+    display: inline;
+}
+
+
+.user {
+    gap: 10px;
+}
+
+.inputUser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.menuLink {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menuLink span {
+    font-weight: bold;
+    margin: 0;
+    display: inline;
+}
+
+.user {
+    gap: 10px;
+}
+
+.inputUser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Classes para controlar visibilidade */
+.mobile-header,
+.mobile-search {
+    display: none;
+    /* Escondido por padrão */
+}
+
+.menu-close {
+    display: none;
+    /* Escondido por padrão */
+}
+
+/* Estilos para Mobile */
+
+
+/* Estilos para Desktop */
+@media (min-width: 769px) {
+
+    .mobile-header,
+    .mobile-search {
+        display: none;
+        /* Esconde header mobile em desktop */
+    }
+}

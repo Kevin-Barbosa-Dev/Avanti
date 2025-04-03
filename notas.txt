@@ -1,0 +1,33 @@
+Cor azul = 005CFF Usado para destaques, como o banner superior e os textos promocionais.
+Preto (#000000) – Utilizado para títulos e ícones.
+
+Branco (#FFFFFF) – Fundo principal.
+
+Cinza Claro (#E7E7EA) - usado no maininfo1
+
+Roxo (#A65A96) – Utilizado no destaque do cupom.
+
+fonte - Nunito
+Peso e Estilo:
+
+Negrito (Bold): Para preços e promoções importantes.
+
+Normal (Regular): Para textos descritivos e placeholders.
+fontSize:
+NOVO 10
+10% OFF 11
+R$ 100,00, 10x 12
+seach, ver mais, cardTitle h3, Comprar 14
+Lançamentos, R$ 79,90 - 16
+maininfo3 h2, p - 24,14
+maininfo4 h3, p - 20,12
+maininfo5 h2, p - 24,14
+maininfo6 p - 16
+
+
+footer
+Cadastre-se na nossa newsletter - 16
+
+main2
+cor de fundo no desconto - 5EC0BE
+bg no NOVO - 00264E

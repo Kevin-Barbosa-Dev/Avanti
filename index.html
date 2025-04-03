@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobileStyle.css">
+    <title>Avanti</title>
+</head>
+
+<body>
+    <header>
+        <div class="containerDesconto">
+            <p>Ganhe <span class="azul">R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom DESCONTO10
+            </p>
+        </div>
+
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="menu-icon" id="menuToggle">
+                <img src="img/menuIcon.png" alt="Menu">
+            </div>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="cart-icon">
+                <a><img src="img/carrinhoIcon.png"></a>
+            </div>
+        </div>
+
+        <!-- Mobile Search - Apenas visível no mobile -->
+        <div class="mobile-search">
+            <div class="inputIcon">
+                <input type="text" placeholder="Digite aqui o que você procura">
+                <button><img src="img/searchIcon.png"></button>
+            </div>
+        </div>
+
+        <!-- Desktop Header -->
+        <div class="containerHeader">
+            <div class="containerHeaderLogo">
+                <div class="desktop-header">
+
+                    <div class="logoInput">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="logo">
+                        </div>
+
+                        <div class="inputIcon">
+                            <input type="text" placeholder="Digite aqui o que você procura">
+                            <button><img src="img/searchIcon.png"></button>
+                        </div>
+                    </div>
+                    <div class="inputUser">
+                        <div class="iconUser">
+                            <a class="user">
+                                <img src="img/userIcon.png">
+                                Olá<br> Nome cliente!
+                            </a>
+                            <a><img src="img/carrinhoIcon.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overlay para quando o menu estiver aberto -->
+                <div class="overlay" id="overlay"></div>
+
+                <!-- Menu de navegação -->
+                <div class="menu" id="mobileMenu">
+                    <div class="menu-close" id="menuClose">✕</div>
+                    <a href="" class="menuLink">
+                        <img src="img/menuIcon.png">
+                        <span>Todas as categorias</span>
+                    </a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                    <a href="">Departamento</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

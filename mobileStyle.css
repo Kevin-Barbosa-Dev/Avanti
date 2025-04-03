@@ -1,0 +1,115 @@
+@media (max-width: 768px) {
+
+    .desktop-header,
+    .containerHeader,
+    .containerHeaderLogo {
+        display: none;
+        /* Esconde elementos desktop */
+    }
+
+    .mobile-header {
+        display: flex;
+        /* Mostra header mobile */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .mobile-search {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .mobile-search .inputIcon {
+        padding: 10px;
+    }
+
+    .mobile-search .inputIcon input {
+        box-sizing: border-box;
+    }
+
+    .containerHeader {
+        padding: 10px;
+    }
+
+    .containerHeaderLogo {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .containnerLogoUser {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logoInput {
+        gap: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .inputIcon {
+
+        margin-top: 10px;
+    }
+
+    .inputIcon input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu-close {
+        display: block;
+        /* Mostra o botão de fechar no mobile */
+        align-self: flex-end;
+        font-size: 24px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+}
