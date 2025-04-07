@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrossel.css">
     <link rel="stylesheet" href="mobileStyle.css">
     <title>Avanti</title>
 </head>
@@ -41,14 +42,7 @@
             </div>
         </div>
 
-        <div class="mobile-banner">
-            <img src="img/primeiro-banner.png" alt="Super Sale" class="mobile-banner-img">
-            <div class="mobile-banner-text">
-                <span class="super"><strong>SUPER</strong><br>SALE</span>
-                <span class="azul">ITENS SELECIONADOS COM ATÉ</span>
-                <span class="cinquenta">50% OFF</span>
-            </div>
-        </div>
+
 
 
         <!-- Desktop Header -->
@@ -72,7 +66,9 @@
                                 <img src="img/userIcon.png">
                                 Olá<br> Nome cliente!
                             </a>
-                            <a><img src="img/carrinhoIcon.png"></a>
+                            <div class="cart-icon">
+                                <a><img src="img/carrinhoIcon.png"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,6 +97,16 @@
     </header>
 
     <main>
+
+        <div class="mobile-banner">
+            <img src="img/primeiro-banner.png" alt="Super Sale" class="mobile-banner-img">
+            <div class="mobile-banner-text">
+                <span class="super"><strong>SUPER</strong><br>SALE</span>
+                <span class="azul">ITENS SELECIONADOS COM ATÉ</span>
+                <span class="cinquenta">50% OFF</span>
+            </div>
+        </div>
+
         <div class="container">
             <div class="containerBanner">
                 <div class="banner">
@@ -118,6 +124,130 @@
         </div>
 
 
+        <div class="containerCard">
+            <div class="lancamentos-verMais">
+                <span class="lancamento">Lançamentos</span>
+                <span>Ver mais</span>
+            </div>
+
+            <div class="carousel-container">
+                <button class="carousel-button prev-button" id="prevButton">
+                    <span class="arrow">&#10094;</span>
+                </button>
+
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-item">
+                            <div class="cardProduto">
+                                <div class="novo-tag">NOVO</div>
+                                <img src="img/mainProduto.png" alt="produto">
+                                <div class="cardProdutoInfo">
+                                    <span class="produtoTitle">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.</span>
+                                    <div class="precoEDesconto">
+                                        <div class="cardProdutoPreco">
+                                            <span class="precoAnterior">R$ 100,00</span>
+                                            <span class="precoProduto">R$ 79,90</span>
+                                        </div>
+                                        <div class="desconto">10% OFF</div>
+                                    </div>
+                                    <span class="dezVezes">Ou em até <strong>10x de R$7,90</strong></span>
+                                </div>
+                                <button class="comprar-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="cardProduto">
+                                <div class="novo-tag">NOVO</div>
+                                <img src="img/mainProduto.png" alt="produto">
+                                <div class="cardProdutoInfo">
+                                    <span class="produtoTitle">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.</span>
+                                    <div class="precoEDesconto">
+                                        <div class="cardProdutoPreco">
+                                            <span class="precoAnterior">R$ 100,00</span>
+                                            <span class="precoProduto">R$ 79,90</span>
+                                        </div>
+                                        <div class="desconto">10% OFF</div>
+                                    </div>
+                                    <span class="dezVezes">Ou em até <strong>10x de R$7,90</strong></span>
+                                </div>
+                                <button class="comprar-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="cardProduto">
+                                <div class="novo-tag">NOVO</div>
+                                <img src="img/mainProduto.png" alt="produto">
+                                <div class="cardProdutoInfo">
+                                    <span class="produtoTitle">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.</span>
+                                    <div class="precoEDesconto">
+                                        <div class="cardProdutoPreco">
+                                            <span class="precoAnterior">R$ 100,00</span>
+                                            <span class="precoProduto">R$ 79,90</span>
+                                        </div>
+                                        <div class="desconto">10% OFF</div>
+                                    </div>
+                                    <span class="dezVezes">Ou em até <strong>10x de R$7,90</strong></span>
+                                </div>
+                                <button class="comprar-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <!-- Produto 4 -->
+                        <div class="carousel-item">
+                            <div class="cardProduto">
+                                <div class="novo-tag">NOVO</div>
+                                <img src="img/mainProduto.png" alt="produto">
+                                <div class="cardProdutoInfo">
+                                    <span class="produtoTitle">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.</span>
+                                    <div class="precoEDesconto">
+                                        <div class="cardProdutoPreco">
+                                            <span class="precoAnterior">R$ 100,00</span>
+                                            <span class="precoProduto">R$ 79,90</span>
+                                        </div>
+                                        <div class="desconto">10% OFF</div>
+                                    </div>
+                                    <span class="dezVezes">Ou em até <strong>10x de R$7,90</strong></span>
+                                </div>
+                                <button class="comprar-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="cardProduto">
+                                <div class="novo-tag">NOVO</div>
+                                <img src="img/mainProduto.png" alt="produto">
+                                <div class="cardProdutoInfo">
+                                    <span class="produtoTitle">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.</span>
+                                    <div class="precoEDesconto">
+                                        <div class="cardProdutoPreco">
+                                            <span class="precoAnterior">R$ 100,00</span>
+                                            <span class="precoProduto">R$ 79,90</span>
+                                        </div>
+                                        <div class="desconto">10% OFF</div>
+                                    </div>
+                                    <span class="dezVezes">Ou em até <strong>10x de R$7,90</strong></span>
+                                </div>
+                                <button class="comprar-btn">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-button next-button" id="nextButton">
+                    <span class="arrow">&#10095;</span>
+                </button>
+            </div>
+
+            <!-- Paginação (bolinhas) -->
+            <div class="carousel-pagination" id="carouselPagination"></div>
+        </div>
     </main>
 
     <script src="script.js"></script>

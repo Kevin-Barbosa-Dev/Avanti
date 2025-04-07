@@ -5,12 +5,10 @@
     .containerHeaderLogo,
     .container {
         display: none;
-        /* Esconde elementos desktop */
     }
 
     .mobile-header {
         display: flex;
-        /* Mostra header mobile */
         justify-content: space-between;
         align-items: center;
         padding: 10px;
@@ -107,7 +105,6 @@
 
     .menu-close {
         display: block;
-        /* Mostra o botão de fechar no mobile */
         align-self: flex-end;
         font-size: 24px;
         margin-bottom: 20px;
@@ -129,7 +126,6 @@
         display: block;
     }
 
-    /* Estilos atualizados para o banner mobile */
     .mobile-banner {
         width: 100%;
         height: 300px;
@@ -159,23 +155,14 @@
     }
 
     .super {
-        font-size: 28px;
-        font-weight: 300;
+        font-size: 34px;
         text-align: center;
     }
 
     .azul {
         font-size: 12px;
-        color: #0066ff;
-        margin-bottom: 5px;
-        font-weight: 600;
     }
 
-    .cinquenta {
-        font-size: 32px;
-        color: #0066ff;
-        font-weight: 700;
-    }
 
     .banner-dots {
         position: absolute;
@@ -198,7 +185,6 @@
         background-color: #333;
     }
 
-    /* Estilo para o header com desconto */
     .containerDesconto {
         background-color: #0066ff;
         color: white;
@@ -213,25 +199,53 @@
         font-weight: bold;
     }
 
-    /* Ajustes para o carrinho */
-    .cart-icon {
-        position: relative;
+}
+
+
+
+@media(max-width: 576px) {
+    .mobile-banner {
+        height: 200px;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
     }
 
-    .cart-icon::after {
-        content: "2";
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        background-color: #0066ff;
-        color: white;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-family: "Nunito", sans-serif;
+    .mobile-banner-text {
+        min-width: 150px;
+        width: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-right: 10px;
+        white-space: nowrap;
     }
+
+    .mobile-banner-img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        transform: translateX(-15%);
+    }
+
+    .super {
+        font-size: 24px;
+        white-space: normal;
+        display: block;
+    }
+
+    .azul {
+        font-size: 10px;
+        display: block;
+    }
+
+    .cinquenta {
+        color: #005CFF;
+        font-size: 24px;
+    }
+
+    .des .containerDesconto {
+        font-size: 12px;
+    }
+
+
 }
