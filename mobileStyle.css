@@ -199,6 +199,26 @@
         font-weight: bold;
     }
 
+
+    /*Segunda Banner*/
+    .containerSegundoBanner {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 38px;
+    }
+
+
+    .segundoBanner {
+        height: 390px;
+        width: 100%;
+    }
+
+    .segundoBanner img {
+        width: 391px;
+        height: 390px;
+    }
+
 }
 
 
