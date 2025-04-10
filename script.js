@@ -30,32 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Script para o menu mobile
-    const menuToggle = document.getElementById('menuToggle');
-    const menuClose = document.getElementById('menuClose');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const overlay = document.getElementById('overlay');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function () {
-            mobileMenu.style.left = '0';
-            overlay.style.display = 'block';
-        });
-    }
-
-    if (menuClose) {
-        menuClose.addEventListener('click', function () {
-            mobileMenu.style.left = '-250px';
-            overlay.style.display = 'none';
-        });
-    }
-
-    if (overlay) {
-        overlay.addEventListener('click', function () {
-            mobileMenu.style.left = '-250px';
-            overlay.style.display = 'none';
-        });
-    }
 
     // Carrossel personalizado
     const track = document.getElementById('carouselTrack');

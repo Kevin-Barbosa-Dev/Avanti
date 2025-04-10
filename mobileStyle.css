@@ -3,7 +3,7 @@
     .desktop-header,
     .containerHeader,
     .containerHeaderLogo,
-    .container {
+    .containerBanner {
         display: none;
     }
 
@@ -219,6 +219,50 @@
         height: 390px;
     }
 
+    /*Terceiro Banner*/
+    .containerContentTerceiroBanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 717px;
+    }
+
+    .cardAndBanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        height: 661px;
+        width: 100%;
+        gap: 5px
+    }
+
+    .cardContainer {
+        gap: 20px;
+    }
+
+    .terceiroBanner img {
+        max-height: 349px;
+        max-width: 349px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card img {
+        max-height: 60px;
+        max-width: 60px;
+    }
+
+    .terceiroBannerTitle {
+        font-size: 20px;
+    }
+
+    .card span {
+        font-size: 12px;
+    }
 }
 
 
