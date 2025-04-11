@@ -136,3 +136,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Atualiza o carrossel quando a janela é redimensionada
     window.addEventListener('resize', updateCarouselVars);
 });
+function changeImage() {
+    const bannerQuartoDesktop = document.getElementById('bannerQuatro');
+    const newImageMobile = document.getElementById('bannerQuatroMobile');
+
+    if (window.innerWidth <= 768) {
+        bannerQuartoDesktop.src = newImageMobile.src;
+    } else {
+        newImageMobile.sr = bannerQuartoDesktop.src;
+    }
+}

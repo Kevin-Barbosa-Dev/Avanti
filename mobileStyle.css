@@ -3,7 +3,8 @@
     .desktop-header,
     .containerHeader,
     .containerHeaderLogo,
-    .containerBanner {
+    .containerBanner,
+    .bannerQuatro {
         display: none;
     }
 
@@ -262,6 +263,46 @@
 
     .card span {
         font-size: 12px;
+    }
+
+    .entreEmContato {
+        font-size: 16px;
+        line-height: 140%;
+        max-height: 75px;
+    }
+
+    .quartoBanner img {
+        height: 449px;
+    }
+
+    .containerPaiCadastrarNewsletter {
+        height: 330px;
+        width: 100%;
+    }
+
+    .textCadastro {
+        font-size: 16px;
+    }
+
+    .containerCadastrarNewsletter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #F5F5F5;
+        height: 284px;
+    }
+
+    .containerCheckbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .containerCheckbox button {
+        width: 100%;
     }
 }
 
