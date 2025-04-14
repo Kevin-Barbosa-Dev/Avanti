@@ -7,6 +7,7 @@ body {
     margin: auto;
     padding: 0;
     font-family: 'Nunito';
+    width: 100%;
 }
 
 .desktop-header {
@@ -50,8 +51,8 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 10px 0px;
-
-
+    height: 118px;
+    width: 100%;
 }
 
 
@@ -108,10 +109,6 @@ body {
     display: flex;
     gap: 30px;
     align-items: center;
-    width: 1259;
-    height: 22;
-    top: 110px;
-    left: 330px;
     justify-content: space-between;
 
 }
@@ -488,6 +485,67 @@ a {
     line-height: 20px;
 }
 
+
+/*Footer*/
+
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    height: 170px;
+    background-color: #F5F5F5;
+}
+
+.logoAndSocialMedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socialMedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footerContentText {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footerContentText span {
+    font-weight: bold;
+    color: #303030;
+
+}
+
+.footerContentText h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.footerContentText h5 {
+    color: #707070;
+    margin: 0px;
+    line-height: 28px;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 216px;
+    background-color: #F5F5F5;
+}
+
 /* Estilos para Desktop */
 @media (min-width: 769px) {
 
@@ -499,7 +557,7 @@ a {
     }
 }
 
-@media (max-width: 951px) {
+@media (max-width: 1000px) {
 
     .logo img {
         height: 25px;
@@ -528,5 +586,10 @@ a {
         position: absolute;
         top: 0px;
         right: 0px;
+    }
+
+    .containerCadastrarNewsletter {
+        padding: 0px;
+        gap: 2px;
     }
 }
