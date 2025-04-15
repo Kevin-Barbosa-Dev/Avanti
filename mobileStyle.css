@@ -4,7 +4,9 @@
     .containerHeader,
     .containerHeaderLogo,
     .containerBanner,
-    .bannerQuatro {
+    .bannerQuatro,
+    .footerContainer,
+    .footerBottom {
         display: none;
     }
 
@@ -278,10 +280,16 @@
     .containerPaiCadastrarNewsletter {
         height: 330px;
         width: 100%;
+        gap: 16px;
     }
 
     .textCadastro {
         font-size: 16px;
+    }
+
+    .containerCadastro {
+        height: 284px;
+        width: 358px;
     }
 
     .containerCadastrarNewsletter {
@@ -289,8 +297,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: #F5F5F5;
-        height: 284px;
+        height: 208px;
+        width: 326px;
+        gap: 16px;
+    }
+
+    .caixaDeTexto {
+        width: 326px;
     }
 
     .containerCheckbox {
@@ -307,72 +320,97 @@
 
     /*Footer*/
 
-    .footerContent {
-        flex-direction: column;
-        align-items: flex-start;
+    .footerMobile {
+        background-color: #F5F5F5;
         padding: 20px;
-        height: auto;
-        gap: 20px;
-    }
-
-    .logoAndSocialMedia {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 48px;
     }
 
-    .logoAndSocialMedia img.logo {
-        width: 120px;
+    .footerMobileLogo img {
+        height: 27px;
     }
 
-    .socialMedia {
-        gap: 20px;
+    .footerMobileSocial {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
     }
 
-    details {
+    .sectionContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 162px;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .footerMobileSection {
         width: 100%;
         border-top: 1px solid #ccc;
-        padding: 10px 0;
+        padding-top: 10px;
     }
 
-    summary {
-        list-style: none;
+    .footerMobileSection summary {
         cursor: pointer;
-        font-weight: bold;
+        list-style: none;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
 
-    summary::after {
-        content: "▾";
-        font-size: 16px;
-        transition: transform 0.3s;
+    .footerMobileSection summary img {
+        transition: transform 0.3s ease;
     }
 
-    details[open] summary::after {
+    .footerMobileSection summary img.rotated {
         transform: rotate(180deg);
     }
 
-    ul {
-        list-style: none;
-        padding-left: 15px;
-        margin-top: 10px;
+    .footerMobileSection summary>h5 {
+        color: #303030;
+        margin: 0px;
+        font-size: 14px;
+        font-weight: bold;
     }
 
-    ul li {
+    .footerMobileSection p {
+        margin: 5px 0;
         color: #707070;
-        line-height: 24px;
+        padding-left: 10px;
     }
 
-    .payment {
-        padding: 20px;
-        height: auto;
+    .footerMobilePayment img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .footerBottomMobile {
+        display: flex;
+        align-items: center;
         justify-content: center;
+        height: 130px;
+        margin-top: 20px;
     }
 
-    .payment img {
-        max-width: 100%;
-        height: auto;
+    .footerBottomMobileContent {
+        display: flex;
+        flex-direction: column;
+        width: 358px;
+        gap: 39px;
+
+    }
+
+    .footerBottomMobileContent span {
+        font-size: 12px;
+        color: #707070;
+        text-align: center;
+        line-height: 20px;
     }
 }
 

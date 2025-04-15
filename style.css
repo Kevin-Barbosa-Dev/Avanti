@@ -7,7 +7,6 @@ body {
     margin: auto;
     padding: 0;
     font-family: 'Nunito';
-    width: 100%;
 }
 
 .desktop-header {
@@ -52,7 +51,6 @@ body {
     gap: 10px;
     padding: 10px 0px;
     height: 118px;
-    width: 100%;
 }
 
 
@@ -414,6 +412,7 @@ a {
     flex-direction: column;
     width: 100%;
     height: 230px;
+    gap: 16px;
 }
 
 .textCadastro {
@@ -425,6 +424,13 @@ a {
     color: #005CFF;
 }
 
+.containerCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEDEDE;
+}
+
 .containerCadastrarNewsletter {
     display: flex;
     align-items: center;
@@ -432,7 +438,6 @@ a {
     width: auto;
     padding: 0px 40px 0px 40px;
     height: 176px;
-    background-color: #DEDEDE;
     gap: 24px;
 }
 
@@ -487,7 +492,15 @@ a {
 
 
 /*Footer*/
-
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 386px;
+    background-color: #F5F5F5;
+    gap: 90px;
+}
 
 .footerContent {
     display: flex;
@@ -495,7 +508,8 @@ a {
     justify-content: space-around;
     gap: 10px;
     height: 170px;
-    background-color: #F5F5F5;
+    width: 100%;
+
 }
 
 .logoAndSocialMedia {
@@ -510,7 +524,27 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
+}
+
+.instaImg {
+    width: 19px;
+    height: 19px;
+}
+
+.facebookImg {
+    width: 10px;
+    height: 22px;
+}
+
+.youtubeImg {
+    width: 26px;
+    height: 26px;
+}
+
+.tikImg {
+    width: 18px;
+    height: 21px;
 }
 
 .footerContentText {
@@ -542,8 +576,30 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 216px;
-    background-color: #F5F5F5;
+}
+
+.footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 211px;
+    gap: 20px;
+}
+
+.footerBottom span {
+    font-size: 12px;
+    color: #707070;
+    text-align: center;
+    line-height: 20px;
+    height: 59px;
+    max-width: 1074px;
+}
+
+.empresasParceiras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilos para Desktop */
@@ -552,7 +608,9 @@ a {
     .mobile-header,
     .mobile-search,
     .mobile-banner,
-    .bannerQuatroMobile {
+    .bannerQuatroMobile,
+    .footerMobile,
+    .footerBottomMobile {
         display: none;
     }
 }

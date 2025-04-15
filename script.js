@@ -146,3 +146,25 @@ function changeImage() {
         newImageMobile.sr = bannerQuartoDesktop.src;
     }
 }
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".footerMobileSection");
+
+    sections.forEach(section => {
+        const summary = section.querySelector("summary");
+        const arrow = summary.querySelector("img");
+
+        summary.addEventListener("click", (e) => {
+            setTimeout(() => {
+                if (section.open) {
+                    arrow.classList.add("rotated");
+                } else {
+                    arrow.classList.remove("rotated");
+                }
+            }, 10);
+        });
+    });
+});
