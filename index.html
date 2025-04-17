@@ -38,11 +38,24 @@
         <!-- Mobile Search - Apenas visível no mobile -->
         <div class="mobile-search">
             <div class="inputIcon">
-                <input type="text" placeholder="Digite aqui o que você procura">
-                <button><img src="img/searchIcon.png"></button>
+                <input type="text" placeholder="Digite aqui o que você procura" id="mobile-search-input">
+                <button id="mobile-search-button"><img src="img/searchIcon.png"></button>
             </div>
+            <div id="mobile-search-result" class="search-result"></div>
         </div>
 
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Menu Mobile -->
+        <nav class="menuMobile" id="mobileMenu">
+            <div class="menu-close" id="menuClose">✕</div>
+            <a href="#" class="menuLink"><img src="img/menuIcon.png"><span>Todas as categorias</span></a>
+            <a href="#">Departamento 1</a>
+            <a href="#">Departamento 2</a>
+            <a href="#">Departamento 3</a>
+            <a href="#">Departamento 4</a>
+            <a href="#">Departamento 5</a>
+        </nav>
 
 
 
@@ -57,10 +70,11 @@
                         </div>
 
                         <div class="inputIcon">
-                            <input type="text" placeholder="Digite aqui o que você procura">
-                            <button><img src="img/searchIcon.png"></button>
+                            <input type="text" placeholder="Digite aqui o que você procura" id="desktop-search-input">
+                            <button id="desktop-search-button"><img src="img/searchIcon.png"></button>
                         </div>
                     </div>
+                    <div id="desktop-search-result" class="search-result"></div>
                     <div class="inputUser">
                         <div class="iconUser">
                             <a class="user">
@@ -74,27 +88,170 @@
                     </div>
                 </div>
 
-                <!-- Overlay para quando o menu estiver aberto -->
-                <div class="overlay" id="overlay"></div>
 
-                <!-- Menu de navegação -->
-                <div class="menu" id="mobileMenu">
-                    <div class="menu-close" id="menuClose">✕</div>
-                    <a href="" class="menuLink">
-                        <img src="img/menuIcon.png">
-                        <span>Todas as categorias</span>
-                    </a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
-                    <a href="">Departamento</a>
+                <div class="wrapper-menu">
+                    <div class="menu">
+                        <a href="" class="menuLink" id="todasCategorias">
+                            <img src="img/menuIcon.png">
+                            <span>Todas as categorias</span>
+                        </a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                        <a href="" class="departamento-link">Departamento</a>
+                    </div>
+
+
+                    <div class="dropdown-categorias" id="todasCategoriasDropdown">
+                        <div class="container-menu-lateral">
+                            <div class="menu-lateral">
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                                <summary class="menu-titulo">
+                                    <p>Departamento</p>
+                                    <img src="img/iconmonstr-arrow-25.png" alt="seta">
+                                </summary>
+                            </div>
+                        </div>
+                        <div class="subcategorias">
+                            <div class="container-coluna">
+                                <div class="coluna">
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                </div>
+                                <div class="coluna">
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                </div>
+                                <div class="coluna">
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                    <p>Categoria</p>
+                                </div>
+                            </div>
+                            <div class="banner-menu">
+                                <img src="img/terceiro_banner.png" alt="Produtos">
+                                <div class="texto-banner-menu">
+                                    <p>Confira os<br>Produtos<br><strong>Que acabaram<br>De chegar</strong></p>
+                                    <button>VER TODOS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Dropdown para Departamentos -->
+                    <div class="dropdown-categorias" id="departamentoDropdown">
+                        <div class="subcategorias subcategorias-full">
+                            <div class="titleAndColuna">
+                                <span>Departamento</span>
+                                <div class="container-coluna">
+                                    <div class="coluna">
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                    </div>
+                                    <div class="coluna">
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                    </div>
+                                    <div class="coluna">
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                        <p>Categoria</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner-menu">
+                                <img src="img/terceiro_banner.png" alt="Produtos">
+                                <div class="texto-banner-menu">
+                                    <p>Confira os<br>Produtos<br><strong>Que acabaram<br>De chegar</strong></p>
+                                    <button>VER TODOS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+
+
+
+
     </header>
 
     <main>

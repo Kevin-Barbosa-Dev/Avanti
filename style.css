@@ -48,7 +48,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 10px 0px;
     height: 118px;
 }
@@ -141,6 +141,213 @@ a {
 }
 
 
+.dropdown-categorias {
+    position: absolute;
+    display: none;
+    gap: 30px;
+    height: 329px;
+    width: 1261px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#todasCategorias:hover~#todasCategoriasDropdown,
+#todasCategoriasDropdown:hover {
+    display: flex;
+}
+
+.menu:hover+.dropdown-categorias {
+    display: none;
+}
+
+.container-menu-lateral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 329px;
+    width: 234px;
+    background-color: #F5F5F5;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    overflow-y: auto;
+    height: 298px;
+    gap: 12px;
+    width: 190px;
+    padding-right: 10px;
+}
+
+.menu-lateral::-webkit-scrollbar {
+    width: 5px;
+    /* Largura do scrollbar */
+}
+
+
+.menu-lateral::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    /* Cor do "polegar" do scrollbar */
+}
+
+.menu-lateral p {
+    margin: 0px;
+}
+
+.menu-titulo {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 19px;
+}
+
+.menu-titulo:hover {
+    filter: invert(29%) sepia(93%) saturate(3766%) hue-rotate(211deg) brightness(99%) contrast(107%);
+    font-weight: bold;
+}
+
+.menu-titulo img {
+    filter: brightness(0);
+    transform: rotate(-90deg);
+    transition: filter 0.3s
+}
+
+.subcategorias {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.titleAndColuna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.titleAndColuna span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.container-coluna {
+    display: flex;
+    gap: 90px;
+    height: 236px;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coluna p:hover {
+    color: #005CFF;
+    font-weight: bold;
+}
+
+.coluna p {
+    margin: 0px;
+    font-size: 14px;
+}
+
+.banner-menu {
+    height: 298px;
+    width: 236px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.banner-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-menu::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.texto-banner-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    color: #fff;
+    gap: 27px;
+    z-index: 3;
+}
+
+.texto-banner-menu button {
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    height: 38px;
+    width: 116px;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+}
+
+.texto-banner-menu p {
+    height: 126px;
+    font-size: 24px;
+    margin: 0px;
+}
+
+/* Novo estilo para o dropdown de departamentos */
+.departamento-dropdown {
+    display: none;
+}
+
+/* Mostrar dropdown de departamentos ao passar o mouse */
+.departamento-link:hover~#departamentoDropdown,
+#departamentoDropdown:hover {
+    display: flex;
+}
+
+/* Ajuste para subcategorias ocuparem toda a largura quando não há menu lateral */
+.subcategorias-full {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.subcategorias-full .container-coluna {
+    gap: 120px;
+    /* Aumentar o espaçamento entre colunas */
+}
+
+
+
+
+
+
 .user {
     gap: 10px;
 }
@@ -152,17 +359,7 @@ a {
     gap: 10px;
 }
 
-.menuLink {
-    gap: 10px;
-    display: flex;
-    align-items: center;
-}
 
-.menuLink span {
-    font-weight: bold;
-    margin: 0;
-    display: inline;
-}
 
 .user {
     gap: 10px;
@@ -180,6 +377,15 @@ a {
 .mobile-search {
     display: none;
     /* Escondido por padrão */
+}
+
+.search-result {
+    margin-top: 10px;
+    padding: 10px;
+    color: #005CFF;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
 }
 
 .menu-close {
@@ -607,6 +813,7 @@ a {
 
     .mobile-header,
     .mobile-search,
+    .menuMobile,
     .mobile-banner,
     .bannerQuatroMobile,
     .footerMobile,

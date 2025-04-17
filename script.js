@@ -4,30 +4,128 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('overlay');
 
-    // Função para abrir o menu
     menuToggle.addEventListener('click', function () {
         mobileMenu.classList.add('active');
         overlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Impede rolagem quando menu está aberto
+        document.body.style.overflow = 'hidden';
     });
 
-    // Função para fechar o menu
     function closeMenu() {
         mobileMenu.classList.remove('active');
         overlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restaura rolagem
+        document.body.style.overflow = '';
     }
 
     menuClose.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
-
-    // Fechar menu ao redimensionar para desktop
-    window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-            closeMenu();
-        }
-    });
 });
+
+// Função para processar a busca
+function processSearch(inputId, resultId) {
+    const searchInput = document.getElementById(inputId);
+    const searchResult = document.getElementById(resultId);
+
+    if (searchInput && searchResult) {
+        const searchText = searchInput.value.trim();
+
+        if (searchText) {
+            searchResult.textContent = `Você buscou por: "${searchText}"`;
+            searchResult.style.display = 'block';
+        } else {
+            searchResult.style.display = 'none';
+        }
+    }
+}
+
+// Adicionar event listeners quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', function () {
+    // Configurar busca desktop
+    const desktopSearchButton = document.getElementById('desktop-search-button');
+    if (desktopSearchButton) {
+        desktopSearchButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            processSearch('desktop-search-input', 'desktop-search-result');
+        });
+    }
+
+    // Configurar busca mobile
+    const mobileSearchButton = document.getElementById('mobile-search-button');
+    if (mobileSearchButton) {
+        mobileSearchButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            processSearch('mobile-search-input', 'mobile-search-result');
+        });
+    }
+
+    // Adicionar funcionalidade para buscar ao pressionar Enter
+    const desktopInput = document.getElementById('desktop-search-input');
+    if (desktopInput) {
+        desktopInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                processSearch('desktop-search-input', 'desktop-search-result');
+            }
+        });
+    }
+
+    const mobileInput = document.getElementById('mobile-search-input');
+    if (mobileInput) {
+        mobileInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                processSearch('mobile-search-input', 'mobile-search-result');
+            }
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const todasCategoriasLink = document.getElementById('todasCategorias');
+    const departamentoLinks = document.querySelectorAll('.departamento-link');
+    const departamentoDropdown = document.getElementById('departamentoDropdown');
+    const todasCategoriasDropdown = document.getElementById('todasCategoriasDropdown');
+
+
+    if (todasCategoriasLink) {
+        todasCategoriasLink.addEventListener('mouseenter', function () {
+            departamentoDropdown.style.display = 'none';
+            todasCategoriasDropdown.style.display = 'flex';
+        });
+    }
+
+    departamentoLinks.forEach(link => {
+        link.addEventListener('mouseenter', function () {
+            todasCategoriasDropdown.style.display = 'none';
+            departamentoDropdown.style.display = 'flex';
+        });
+    });
+
+    const wrapperMenu = document.querySelector('.wrapper-menu');
+    wrapperMenu.addEventListener('mouseleave', function () {
+        departamentoDropdown.style.display = 'none';
+        todasCategoriasDropdown.style.display = 'none';
+    });
+
+    if (todasCategoriasDropdown) {
+        todasCategoriasDropdown.addEventListener('mouseenter', function () {
+            todasCategoriasDropdown.style.display = 'flex';
+        });
+
+        todasCategoriasDropdown.addEventListener('mouseleave', function () {
+            todasCategoriasDropdown.style.display = 'none';
+        });
+    }
+
+    if (departamentoDropdown) {
+        departamentoDropdown.addEventListener('mouseenter', function () {
+            departamentoDropdown.style.display = 'flex';
+        });
+
+        departamentoDropdown.addEventListener('mouseleave', function () {
+            departamentoDropdown.style.display = 'none';
+        });
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
