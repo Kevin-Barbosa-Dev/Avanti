@@ -221,6 +221,7 @@
     .segundoBanner {
         height: 390px;
         width: 100%;
+        overflow: hidden;
     }
 
     .segundoBanner img {
